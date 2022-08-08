@@ -6,7 +6,7 @@ The following environments were tested:
 - Vitis HLS 2022.1
 - PYNQ-Z1 (PYNQ 2.5)
 
-## How to use
+## Vitis HLS Project
 Set the path to Vitis HLS and execute the following command:  
 ```
 vitis_hls -f make_vitis_hls_project.tcl
