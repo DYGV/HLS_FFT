@@ -28,5 +28,5 @@ After high-level synthesis, the block design is as follows:
 ![block](https://user-images.githubusercontent.com/8480644/183441207-d22848ae-bcbf-4800-b742-3c119c09491a.PNG)
 
 ## Logic Driver
-The operation can be seen on [this notebook](./jupyter_notebook/FFT_from_PYNQ_libray.ipynb).
+The operation can be seen on [this notebook](./jupyter_notebook/FFT_from_PYNQ_library.ipynb).
 
