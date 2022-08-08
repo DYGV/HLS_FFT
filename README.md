@@ -13,8 +13,8 @@ Data input/output is mainly as follows:
     ```
 - The circuit is driven by the `CTRL` register(offset 0x00)  
 
-- The `size` register(offset 0x10) can be set to a value of 3\~10 ( $2^3$ ~ $2^{10}$ )  
-    If you want to set more than that, change `TWO_TO_THE_POWER_OF_N_MAX` in the header file. The [Xilinx FFT IP core](https://www.xilinx.com/products/intellectual-property/fft.html) allows $2^3$ ~ $2^{16}$ FFT points.
+- The `size` register(offset 0x10) can be set to a value of 3\~10 ( $2^3$ ~ $2^{10}$-Point FFT )  
+    If you want to set more than that, change `TWO_TO_THE_POWER_OF_N_MAX` in the header file. The [Xilinx FFT IP core](https://www.xilinx.com/products/intellectual-property/fft.html) allows $2^3$ ~ $2^{16}$-Point FFT.
 - Data is transferred by `DMA` using the `AXI4-Stream` interface  
 - The FPGA logic input/output types can be [`numpy.csingle(float complex)`](https://numpy.org/doc/stable/reference/arrays.scalars.html#numpy.csingle) or [`numpy.single(float)`](https://numpy.org/doc/stable/reference/arrays.scalars.html#numpy.single)  
     The default input/output is a `float complex`. You can switch between them by manipulating the `#define` directive in the header file.  
