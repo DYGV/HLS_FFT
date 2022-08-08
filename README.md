@@ -5,7 +5,7 @@ The following environments were tested:
 - Vivado 2022.1
 - Vitis HLS 2022.1
 - PYNQ-Z1 (PYNQ 2.5)
-## About HLS Logic
+## HLS design
 Data input/output is mainly as follows:  
 - The top function 
     ```C
