@@ -7,7 +7,7 @@ The following environments were tested:
 - PYNQ-Z1 (PYNQ 2.5)
 
 ## Vitis HLS Project
-Set the path to Vitis HLS and execute the following command:  
+Set the path to Vitis HLS and run the following command:  
 ```
 vitis_hls -f make_vitis_hls_project.tcl
 ```
