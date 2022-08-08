@@ -5,6 +5,14 @@ The following environments were tested:
 - Vivado 2022.1
 - Vitis HLS 2022.1
 - PYNQ-Z1 (PYNQ 2.5)
+
+## How to use
+Set the path to Vitis HLS and execute the following command:  
+```
+vitis_hls -f make_vitis_hls_project.tcl
+```
+This command creates a directory named `hls_fft_project`, which contains the project files. Setup target device before synthesis.  
+
 ## HLS design
 Data input/output is mainly as follows:  
 - The top function 
