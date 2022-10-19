@@ -13,8 +13,8 @@ source /tools/Xilinx/Vivado/<version>/settings64.sh
 make all
 ```
 After the make command finishes, launch the project with `vivado vivado/fft.xpr`. You can see the following block design.  
-![bd](https://user-images.githubusercontent.com/8480644/196728631-731426a0-aba7-4456-b3a8-8b03c0e1c4a2.png)
-
+![bd](https://user-images.githubusercontent.com/8480644/196728631-731426a0-aba7-4456-b3a8-8b03c0e1c4a2.png)  
+The hardware drivers can be found in [this notebook](./jupyter_notebook/FFT_from_PYNQ_library.ipynb).
 
 ## HLS design
 Data input/output is mainly as follows:  
@@ -34,5 +34,3 @@ Data input/output is mainly as follows:
 
 ![io](https://user-images.githubusercontent.com/8480644/183457008-fcb3c22d-aea1-4291-a0e7-748091fe721e.PNG)
   
-## Hardware Driver
-You can see how it works in [this notebook](./jupyter_notebook/FFT_from_PYNQ_library.ipynb).
