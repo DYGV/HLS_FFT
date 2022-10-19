@@ -1,17 +1,20 @@
 # HLS_FFT
 ## Overview
-This repository contains HLS code that calls the [Xilinx FFT IP core](https://www.xilinx.com/products/intellectual-property/fft.html) from the [FFT IP Library](https://docs.xilinx.com/r/en-US/ug1399-vitis-hls/FFT-IP-Library) and a `Python` program to handle it.  
+This repository contains HLS code that calls the [Xilinx FFT IP core](https://www.xilinx.com/products/intellectual-property/fft.html) from the [FFT IP Library](https://docs.xilinx.com/r/en-US/ug1399-vitis-hls/FFT-IP-Library) and a Python program to handle it.  
 The following environments were tested:
 - Vivado 2022.1
 - Vitis HLS 2022.1
 - PYNQ-Z1 (PYNQ 2.5)
 
-## Vitis HLS Project
-Set the path to Vitis HLS and run the following command:  
+## Usage
+The following command will create the FFT IP core and block design for PYNQ-Z1. Replace <version> with the version of Vivado installed on your machine.  
 ```
-vitis_hls -f make_vitis_hls_project.tcl
+source /tools/Xilinx/Vivado/<version>/settings64.sh
+make all
 ```
-This command creates a directory named `hls_fft_project`, which contains the project files. Setup target device before synthesis.  
+After the make command finishes, launch the project with `vivado vivado/fft.xpr`. You can see the following block design.  
+![bd](https://user-images.githubusercontent.com/8480644/196728631-731426a0-aba7-4456-b3a8-8b03c0e1c4a2.png)
+
 
 ## HLS design
 Data input/output is mainly as follows:  
@@ -30,11 +33,6 @@ Data input/output is mainly as follows:
     **The [FFT IP Library](https://docs.xilinx.com/r/en-US/ug1399-vitis-hls/FFT-IP-Library) defines `float complex` types for input and output. Therefore, note that using `float` for inputs and outputs in FPGA logic (Uncomment `USE_FLOAT` in header file) requires type conversion in the FPGA logic, which may result in performance degradation.**  
 
 ![io](https://user-images.githubusercontent.com/8480644/183457008-fcb3c22d-aea1-4291-a0e7-748091fe721e.PNG)
-
-
-## Vivado Block Design
-After high-level synthesis, the block design is as follows:
-![block](https://user-images.githubusercontent.com/8480644/183441207-d22848ae-bcbf-4800-b742-3c119c09491a.PNG)
-
+  
 ## Hardware Driver
 You can see how it works in [this notebook](./jupyter_notebook/FFT_from_PYNQ_library.ipynb).

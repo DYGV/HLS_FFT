@@ -1,3 +1,4 @@
 *.log
+*.jou
 hls_fft_project/
-
+vivado/
