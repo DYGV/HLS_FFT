@@ -17,7 +17,7 @@ After the make command finishes, launch the project with `vivado vivado/fft.xpr`
 The hardware drivers can be found in [this notebook](./jupyter_notebook/FFT_from_PYNQ_library.ipynb).
 
 ## HLS design
-Data input/output is mainly as follows:  
+Data input/output is as follows:  
 - The top function 
     ```C
     void hls_fft(fft_stream &input, fft_stream &output, unsigned size)
