@@ -5,6 +5,9 @@ The following environments were tested:
 - Vivado 2022.1
 - Vitis HLS 2022.1
 - PYNQ-Z1 (PYNQ 2.5)
+  
+  
+It appears that this repository is referenced on [the Xilinx Q&A page](https://support.xilinx.com/s/question/0D54U00006nWWASSA4/why-the-exported-rtl-of-hlsfft-makes-an-issue-with-param-component). Thank you.  
 
 ## Usage
 The following command will create the FFT IP core and block design for PYNQ-Z1. Replace <version> with the version of Vivado installed on your machine.  
